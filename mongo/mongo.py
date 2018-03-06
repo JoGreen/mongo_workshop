@@ -1,8 +1,7 @@
 from pymongo import MongoClient
-#import db_connections_data
 import connection_data
 
-class DbInstance:
+class MongoInstance:
 
 
     def __init__(self, port=None, db_name=None):  #not usefuls using dbname here
@@ -15,8 +14,7 @@ class DbInstance:
         else:
             self.db_name = db_name
 
-        #self.db = MongoClient(db_connections_data.host, self.port)[self.db_name]
-        self.db = MongoClient(connection_data.url, self.port)[self.db_name]
+        self.db = MongoClient(connection_data.url)[self.db_name]
 
     def getDbInstance(self): #deprecated
         return self.db
