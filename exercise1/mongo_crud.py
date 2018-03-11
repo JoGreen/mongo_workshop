@@ -3,6 +3,8 @@ from mongo.mongo import MongoInstance
 test_collection = 'lessons'
 db = MongoInstance().getDbInstance()
 
+print '\neverything is working. you created the dblp db and the lessons collection.\nnow complete the 2 exercise in the file.\n'
+
 doc = {
     'university': 'Roma Tre',
     'type': 'workshop',
@@ -25,7 +27,8 @@ doc2 = {
     ]
 }
 
-####insert / (implicit)create
+####insert / (implicit)create database and collection
+# if you want to see how connect to the db see the db var on the top of the file and  mongo.py file
 
 db[test_collection].insert(doc)
 #write some a code line to insert the second document
