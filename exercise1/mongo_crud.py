@@ -37,9 +37,11 @@ db[test_collection].insert(doc)
 
 
 ####find
-db[test_collection].find({})  ##find all docs in the collection
+results = db[test_collection].find({})  ##find all docs in the collection
 #write a code line to find only RomaTre lessons
 #write a code line to find all the lesson Mike Bostock has joined as a partecipant
 
+#print the results of your query; results is a mongocursor (similar to python iterator), so you cannot just print the results variable
+#use list(results) to load all data in an array
 ####remove
 #write a code line to remove all docs with type = theory
