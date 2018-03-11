@@ -43,6 +43,7 @@ for row in tqdm(res):
 
 ##change step value to see different time logs in your console -> max value 5000 for this example
     step  = 5
+############################
     if len(docs) > step:
         t0 = time.time()
         print db[migration_collection].insert_many(docs)
